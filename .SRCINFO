@@ -1,0 +1,21 @@
+pkgbase = bwphone-bin
+	pkgdesc = Unlock the Bitwarden browser extension with your phone's fingerprint (prebuilt binary)
+	pkgver = 0.1.0
+	pkgrel = 1
+	url = https://github.com/rafiibrahim8/bwphone
+	install = bwphone-bin.install
+	arch = x86_64
+	license = MIT
+	depends = gcc-libs
+	depends = glibc
+	depends = org.freedesktop.secrets
+	depends = systemd
+	optdepends = bitwarden-cli: enrolling an account (bwphone enroll)
+	provides = bwphone
+	conflicts = bwphone
+	options = !strip
+	options = !debug
+	source = bwphone-0.1.0-linux-x86_64.tar.gz::https://github.com/rafiibrahim8/bwphone/releases/download/v0.1.0/bwphone-v0.1.0-linux-x86_64.tar.gz
+	sha256sums = 056b1297ee5f10204ac5ddd5f4b74d2f43e46142857201a0eebc5d3f8733a674
+
+pkgname = bwphone-bin

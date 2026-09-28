@@ -1,0 +1,5 @@
+[bwphone-bin]
+source = "github"
+github = "rafiibrahim8/bwphone"
+use_latest_release = true
+prefix = "v"

@@ -1,0 +1,20 @@
+post_install() {
+  cat <<'EOF'
+==> bwphone: the daemons run per user. As each user who wants it:
+      systemctl --user enable --now bwphone bwphone-hello
+    Then install BW Phone on the phone (the .apk on the GitHub release),
+    pair once, enrol an account, and point the browsers at bwphone:
+      bwphone pair
+      bw unlock --raw | bwphone enroll --label Work --from-stdin
+      bwphone manifests write
+    Step by step: /usr/share/doc/bwphone/README.md
+EOF
+}
+
+post_upgrade() {
+  cat <<'EOF'
+==> bwphone: restart the daemons to run the new version:
+      systemctl --user daemon-reload
+      systemctl --user restart bwphone bwphone-hello
+EOF
+}
