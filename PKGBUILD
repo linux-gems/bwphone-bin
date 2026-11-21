@@ -2,7 +2,7 @@
 
 pkgname=bwphone-bin
 _pkgname=bwphone
-pkgver=0.1.3
+pkgver=0.1.4
 pkgrel=1
 pkgdesc="Unlock the Bitwarden browser extension with your phone's fingerprint (prebuilt binary)"
 arch=('x86_64')
@@ -15,7 +15,7 @@ conflicts=("${_pkgname}")
 options=(!strip !debug)
 install="${pkgname}.install"
 source=("${_pkgname}-${pkgver}-linux-x86_64.tar.gz::${url}/releases/download/v${pkgver}/${_pkgname}-v${pkgver}-linux-x86_64.tar.gz")
-sha256sums=('d7eb1aa3d745cd8a2b3e58f1efb78af8c7784b57ac08605533585cf492522f1d')
+sha256sums=('342987e70d83eda34cb07845e54f48d1e7d3b48a20fb0b903dbd8d336b33d1d9')
 
 package() {
   cd "${_pkgname}-v${pkgver}-linux-x86_64"
